@@ -9,6 +9,7 @@ NUM_MIN = -NUM_MAX
 TARGET_MAX = NUM_MAX
 TARGET_MIN = NUM_MIN
 
+
 def _check_preconditions(nums: list[int], target: int) -> bool:
     if not LEN_MIN <= len(nums) <= LEN_MAX:
         return False
@@ -23,9 +24,9 @@ def _check_preconditions(nums: list[int], target: int) -> bool:
     return True
 
 
-def two_sum(...) -> ...:
+def two_sum(nums: list[int], target: int) -> list[int]:
     """Solves problem Two Sum"""
 
-    assert _check_preconditions(...)
+    assert _check_preconditions(nums, target)
 
     pass
