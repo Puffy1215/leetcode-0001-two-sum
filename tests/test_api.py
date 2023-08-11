@@ -6,13 +6,13 @@ from leetcode_0001_two_sum import api
 
 
 @pytest.mark.parametrize(
-    ["result", ...],
+    ["result", "nums", "target"],
     (
         [..., ...],
         [..., ...],
-    )
+    ),
 )
-def test_two_sum(result, ...) -> None:
+def test_two_sum(result, nums: list[int], target: int) -> None:
     """Tests solution for problem Two Sum"""
 
-    assert api.two_sum(...) == result
+    assert api.two_sum(nums, target) == result
