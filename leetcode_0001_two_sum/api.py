@@ -24,9 +24,28 @@ def _check_preconditions(nums: list[int], target: int) -> bool:
     return True
 
 
+def _sum_difference(x: int, y: int, target: int) -> int:
+    pass
+
+
 def two_sum(nums: list[int], target: int) -> list[int]:
     """Solves problem Two Sum"""
 
     assert _check_preconditions(nums, target)
 
-    pass
+    nums = enumerate(nums)
+    nums = sorted(nums, key=lambda pair: pair[1])
+
+    it = iter(nums)
+    rit = reversed(nums)
+
+    i, x = next(it)
+    ri, rx = next(rit)
+
+    while True:
+        if (diff := _sum_difference(x, rx, target)) > 0:
+            i, x = next(it)
+        elif diff < 0:
+            ri, rx = next(rit)
+        else:
+            return [i, ri]
