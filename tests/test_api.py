@@ -13,7 +13,7 @@ from leetcode_0001_two_sum import api
         [[0, 1], [3, 3], 6],
     ),
 )
-def test_two_sum(result, nums: list[int], target: int) -> None:
+def test_two_sum(result: list[int], nums: list[int], target: int) -> None:
     """Tests solution for problem Two Sum"""
 
     assert api.two_sum(nums, target) == result
