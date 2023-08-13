@@ -25,7 +25,7 @@ def _check_preconditions(nums: list[int], target: int) -> bool:
 
 
 def _sum_difference(x: int, y: int, target: int) -> int:
-    pass
+    return target - (x + y)
 
 
 def two_sum(nums: list[int], target: int) -> list[int]:
